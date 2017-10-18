@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import '../../reset.css'
 import './Wizard3.css';
 
@@ -12,14 +13,14 @@ class Wizard3 extends Component {
                         <img src={require('../../assets/header_logo.png')}></img>
                         <div className='wizard3-header-text'>Houser Dashboard</div>
                     </div>
-                    <div className='wizard3-header-text'>Logout</div>
+                    <Link to='/' className='wizard3-header-text'>Logout</Link>
                 </div>
             </section>
             <section className='wizard3-main-content'>
                 <div className='wizard3-main-content-container'>
                     <div className='wizard3-line1-container'>
                         <div className='wizard3-add-listing-text'>Add new listing</div>
-                        <div className='wizard3-cancel-button'>Cancel</div>
+                        <Link to='/landing' className='wizard3-cancel-button'>Cancel</Link>
                     </div>
                     <div className='wizard3-plain-text-format'>Step 3</div>
                     <div className='wizard3-step-images-container'>
@@ -35,8 +36,8 @@ class Wizard3 extends Component {
                         <input className='wizard3-input2'></input>
                     </div>
                     <div className='wizard3-button-container'>
-                        <div className='wizard3-nextstep-button'>Previous Step</div>
-                        <div className='wizard3-nextstep-button'>Next Step</div>
+                        <Link to='/wizard2' className='wizard3-nextstep-button'>Previous Step</Link>
+                        <Link to='/wizard4' className='wizard3-nextstep-button'>Next Step</Link>
                     </div>
                 </div>
             </section>

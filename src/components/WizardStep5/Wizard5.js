@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import '../../reset.css'
 import './Wizard5.css';
 
@@ -12,14 +13,14 @@ class Wizard5 extends Component {
                         <img src={require('../../assets/header_logo.png')}></img>
                         <div className='wizard5-header-text'>Houser Dashboard</div>
                     </div>
-                    <div className='wizard5-header-text'>Logout</div>
+                    <Link to='/' className='wizard5-header-text'>Logout</Link>
                 </div>
             </section>
             <section className='wizard5-main-content'>
                 <div className='wizard5-main-content-container'>
                     <div className='wizard5-line1-container'>
                         <div className='wizard5-add-listing-text'>Add new listing</div>
-                        <div className='wizard5-cancel-button'>Cancel</div>
+                        <Link to='/landing' className='wizard5-cancel-button'>Cancel</Link>
                     </div>
                     <div className='wizard5-plain-text-format'>Step 5</div>
                     <div className='wizard5-step-images-container'>
@@ -37,8 +38,8 @@ class Wizard5 extends Component {
                         <input className='wizard5-input2'></input>
                     </div>
                     <div className='wizard5-button-container'>
-                        <div className='wizard5-nextstep-button'>Previous Step</div>
-                        <div className='wizard5-nextstep-button'>Next Step</div>
+                        <Link to='/wizard4' className='wizard5-nextstep-button'>Previous Step</Link>
+                        <Link to='/landing' className='wizard5-complete-button'>Complete</Link>
                     </div>
                 </div>
             </section>
