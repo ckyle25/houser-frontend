@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.wizard5-navbar {
+    background-color: #519872;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wizard5-navbar-content-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wizard5-header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wizard5-header-container img {
+    margin-right: 20px;
+}
+
+.wizard5-header-text {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+.wizard5-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.wizard5-main-content-container {
+    width: 50%;
+    height: 100%;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.wizard5-line1-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.wizard5-add-listing-text {
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.wizard5-cancel-button {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #FEC2C2;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wizard5-plain-text-format {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+}
+
+.wizard5-bold-text-format {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.wizard5-step-images-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    margin-top: 20px;
+}
+
+.wizard5-input-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+.wizard5-rec-rent-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.wizard5-input2 {
+    border: 1px solid #AFD4C0;
+    width: 100%;
+    height: 30px;
+}
+
+.wizard5-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.wizard5-nextstep-button {
+    font-family: 'Open Sans';
+    color: #FFF;
+    background-color: #3B5249;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+}

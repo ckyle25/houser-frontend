@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.landing-navbar {
+    background-color: #519872;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.landing-navbar-content-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing-header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.landing-header-container img {
+    margin-right: 20px;
+}
+
+.landing-header-text {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    color: #FFF;
+}
+
+.landing-main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.landing-main-content-container {
+    width: 50%;
+    height: 100%;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.landing-line1-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.landing-line2-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.landing-add-listing-text {
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.landing-new-property-button {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #8AEA92;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.landing-price-input {
+    border: 1px solid #AFD4C0;
+    width: 150px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.landing-filter-button {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #8AEA92;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.landing-reset-button {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #3B5249;
+    width: 80px;
+    height: 50px;
+    display: flex;
+    color: #FFF;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.landing-plain-text-format {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+}
+
+.landing-house-listings-text-format {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.landing-step-images-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.landing-input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+
+.landing-input1 {
+    border: 1px solid #AFD4C0;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.landing-input2 {
+    border: 1px solid #AFD4C0;
+    width: 100%;
+    height: 130px;
+}
+
+.landing-nextstep-button {
+    font-family: 'Open Sans';
+    color: #FFF;
+    background-color: #3B5249;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+}
