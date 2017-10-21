@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Tile from '../Tile/Tile.js'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {userLogout} from '../../redux/appStateManage.js'
@@ -39,6 +40,18 @@ handleLogout = () => {
                     </div>
                     <div className='landing-input-container'>
                         <div className='landing-house-listings-text-format'>Home Listings</div>
+                        {this.props.currentProperties.map(property => {
+                            return(<Tile imgText={property.url} 
+                                  propTitle={property.property_name} 
+                                  propDesc={property.property_description}
+                                  propAddress={property.address}
+                                  propCity={property.city}
+                                  propState={property.state}
+                                  propZip={property.zip}
+                                  propLoanAmt={property.loan_amount}
+                                  propMonthlyMortgage={property.monthly_mortgagge}
+                                  propDesiredRent={property.desired_rent} />)
+                        })}
                     </div>
                 </div>
             </section>
