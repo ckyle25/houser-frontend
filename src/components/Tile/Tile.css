@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.tile-container {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+    justify-content: space-between;
+    width: 100%;
+    height: 160px;
+}
+
+.tile-left-container {
+    display: flex;
+    flex-direction: row;
+}

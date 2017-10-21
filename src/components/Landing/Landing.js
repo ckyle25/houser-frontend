@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {userLogout} from '../../redux/appStateManage.js'
 import '../../reset.css'
 import './Landing.css';
 
 class Landing extends Component {
+
+handleLogout = () => {
+    this.props.userLogout()
+}
+
     render() {
       return (
         <div>
@@ -13,7 +20,7 @@ class Landing extends Component {
                         <img src={require('../../assets/header_logo.png')}></img>
                         <div className='landing-header-text'>Houser Dashboard</div>
                     </div>
-                    <Link to='/' className='landing-header-text'>Logout</Link>
+                    <Link to='/' className='landing-header-text' onClick={this.handleLogout}>Logout</Link>
                 </div>
             </section>
             <section className='landing-main-content'>
@@ -40,4 +47,12 @@ class Landing extends Component {
     }
   }
   
-  export default Landing;
+  function mapStateToProps(state) {
+    return {
+        currentUser: state.currentUser,
+        homeRouting: state.homeRouting,
+        currentProperties: state.currentProperties
+    }
+}
+
+  export default connect(mapStateToProps, {userLogout})(Landing);
