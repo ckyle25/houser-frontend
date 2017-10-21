@@ -3,6 +3,7 @@ import Tile from '../Tile/Tile.js'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {userLogout} from '../../redux/appStateManage.js'
+import Nav from '../Nav/Nav';
 import '../../reset.css'
 import './Landing.css';
 
@@ -15,15 +16,7 @@ handleLogout = () => {
     render() {
       return (
         <div>
-            <section className='landing-navbar'>
-                <div className='landing-navbar-content-container'>
-                    <div className='landing-header-container'>
-                        <img src={require('../../assets/header_logo.png')} alt="Houser Logo"></img>
-                        <div className='landing-header-text'>Houser Dashboard</div>
-                    </div>
-                    <Link to='/' className='landing-header-text' onClick={this.handleLogout}>Logout</Link>
-                </div>
-            </section>
+            <Nav/>
             <section className='landing-main-content'>
                 <div className='landing-main-content-container'>
                     <div className='landing-line1-container'>
