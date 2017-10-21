@@ -7,9 +7,53 @@
     justify-content: space-between;
     width: 100%;
     height: 160px;
+    margin-bottom: 20px;
 }
 
 .tile-left-container {
     display: flex;
     flex-direction: row;
 }
+
+.tile-right-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.tile-left-container img {
+   height: 100%;
+   width: 250px;
+}
+
+.tile-right-container img {
+    height: 20px;
+    width: 20px;
+ }
+
+.tile-bold-text {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.tile-description-container {
+    padding: 10px;
+}
+
+.tile-dividing-line {
+    height: 100%;
+    border: 1px solid black;
+    margin-right: 20px;
+}
+
+.tile-property-info {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.tile-property-line-item {
+    display: flex;
+    flex-direction: row;
+}
+
