@@ -15,7 +15,7 @@ constructor() {
       return (
         <div className='tile-container'>
             <div className='tile-left-container'>
-                <img src={this.props.imgText}></img>
+                <img src={this.props.imgText} alt={`${this.props.propTitle}`}></img>
                 <div className='tile-description-container'>
                   <div className='tile-bold-text'>{this.props.propTitle}</div><br></br>
                   {this.props.propDesc}
@@ -57,7 +57,7 @@ constructor() {
                   <div>{this.props.propZip}</div>
                 </div>
               </div>
-              <img src={require('../../assets/delete_icon.png')}></img>
+              <img src={require('../../assets/delete_icon.png')} alt="delete property icon"></img>
             </div>
         </div>
       );
