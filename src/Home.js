@@ -23,7 +23,7 @@ handleLogin = () => {
       return (
         <div className='home-view-container'>
             <div className='home-main-content-container'>
-                <img src={require('./assets/auth_logo.png')}></img>
+                <img src={require('./assets/auth_logo.png')} alt="houser-logo"></img>
                 <div className='home-input-container'>
                     <div className='home-input-component'>
                         <div className='home-input-text-styling'>Username</div>
@@ -33,12 +33,12 @@ handleLogin = () => {
                         <div className='home-input-text-styling'>Password</div>
                         <input ref='password'></input>
                     </div>
-                </div> 
+                </div>
                 <div className='home-button-container'>
                     <Link to={this.props.homeRouting} className='login-button' onClick={this.handleLogin}>Login</Link>
                     {/* <div className='login-button' onClick={this.handleLogin}>Login</div> */}
                     <Link to='/landing' className='register-button'>Register</Link>
-                </div>   
+                </div>
             </div>
         </div>
       );
@@ -52,5 +52,5 @@ handleLogin = () => {
           currentProperties: state.currentProperties
       }
   }
-  
+
   export default connect(mapStateToProps, {userLogin,getProperties})(Home);

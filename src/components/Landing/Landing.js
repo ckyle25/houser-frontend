@@ -18,7 +18,7 @@ handleLogout = () => {
             <section className='landing-navbar'>
                 <div className='landing-navbar-content-container'>
                     <div className='landing-header-container'>
-                        <img src={require('../../assets/header_logo.png')}></img>
+                        <img src={require('../../assets/header_logo.png')} alt="Houser Logo"></img>
                         <div className='landing-header-text'>Houser Dashboard</div>
                     </div>
                     <Link to='/' className='landing-header-text' onClick={this.handleLogout}>Logout</Link>
@@ -36,13 +36,13 @@ handleLogout = () => {
                         <div className='landing-reset-button'>Reset</div>
                     </div>
                     <div className='landing-step-images-container'>
-                        
+
                     </div>
                     <div className='landing-input-container'>
                         <div className='landing-house-listings-text-format'>Home Listings</div>
                         {this.props.currentProperties.map(property => {
-                            return(<Tile imgText={property.url} 
-                                  propTitle={property.property_name} 
+                            return(<Tile imgText={property.url}
+                                  propTitle={property.property_name}
                                   propDesc={property.property_description}
                                   propAddress={property.address}
                                   propCity={property.city}
@@ -59,7 +59,7 @@ handleLogout = () => {
       );
     }
   }
-  
+
   function mapStateToProps(state) {
     return {
         currentUser: state.currentUser,

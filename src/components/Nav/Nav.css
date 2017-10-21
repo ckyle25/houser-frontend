@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.wizard-navbar {
+    background-color: #519872;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wizard-navbar-content-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wizard-header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.wizard-header-container img {
+    margin-right: 20px;
+}
+
+.wizard-header-text {
+    font-family: 'Open Sans';
+    font-size: 1.2em;
+    color: #FFF;
+    text-decoration: none;
+}

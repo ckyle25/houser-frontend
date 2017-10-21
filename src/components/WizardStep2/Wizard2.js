@@ -2,20 +2,14 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import '../../reset.css'
 import './Wizard2.css';
+import Nav from '../Nav/Nav';
+
 
 class Wizard2 extends Component {
     render() {
       return (
         <div>
-            <section className='wizard2-navbar'>
-                <div className='wizard2-navbar-content-container'>
-                    <div className='wizard2-header-container'>
-                        <img src={require('../../assets/header_logo.png')}></img>
-                        <div className='wizard2-header-text'>Houser Dashboard</div>
-                    </div>
-                    <Link to='/' className='wizard2-header-text'>Logout</Link>
-                </div>
-            </section>
+            <Nav/>
             <section className='wizard2-main-content'>
                 <div className='wizard2-main-content-container'>
                     <div className='wizard2-line1-container'>
@@ -24,11 +18,11 @@ class Wizard2 extends Component {
                     </div>
                     <div className='wizard2-plain-text-format'>Step 2</div>
                     <div className='wizard2-step-images-container'>
-                        <img src={require('../../assets/step_completed.png')}></img>
-                        <img src={require('../../assets/step_active.png')}></img>
-                        <img src={require('../../assets/step_inactive.png')}></img>
-                        <img src={require('../../assets/step_inactive.png')}></img>
-                        <img src={require('../../assets/step_inactive.png')}></img>
+                        <img src={require('../../assets/step_completed.png')} alt="step one completed"></img>
+                        <img src={require('../../assets/step_active.png')} alt="step two active"></img>
+                        <img src={require('../../assets/step_inactive.png')} alt="step three inactive"></img>
+                        <img src={require('../../assets/step_inactive.png')} alt="step four inactive"></img>
+                        <img src={require('../../assets/step_inactive.png')} alt="step five inactive"></img>
                     </div>
                     <div className='wizard2-input-container'>
                         <div className='wizard2-bold-text-format'>Property Name</div>
@@ -60,5 +54,5 @@ class Wizard2 extends Component {
       );
     }
   }
-  
+
   export default Wizard2;
