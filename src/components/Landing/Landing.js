@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import Tile from '../Tile/Tile.js'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {userLogout} from '../../redux/appStateManage.js'
+import {userLogout,getProperties} from '../../redux/appStateManage.js'
 import '../../reset.css'
 import './Landing.css';
 
 class Landing extends Component {
+
+componentDidMount() {
+    this.props.getProperties()
+}
 
 handleLogout = () => {
     this.props.userLogout()
@@ -41,7 +45,9 @@ handleLogout = () => {
                     <div className='landing-input-container'>
                         <div className='landing-house-listings-text-format'>Home Listings</div>
                         {this.props.currentProperties.map(property => {
-                            return(<Tile imgText={property.url} 
+                            console.log(property.property_id)
+                            return(
+                                  <Tile imgText={property.url} 
                                   propTitle={property.property_name} 
                                   propDesc={property.property_description}
                                   propAddress={property.address}
@@ -49,8 +55,10 @@ handleLogout = () => {
                                   propState={property.state}
                                   propZip={property.zip}
                                   propLoanAmt={property.loan_amount}
-                                  propMonthlyMortgage={property.monthly_mortgagge}
-                                  propDesiredRent={property.desired_rent} />)
+                                  propMonthlyMortgage={property.monthly_mortgage}
+                                  propDesiredRent={property.desired_rent} 
+                                  propRecommendedRent={property.recommended_rent}
+                                  propPropertyID={property.property_id}/>)
                         })}
                     </div>
                 </div>
@@ -68,4 +76,4 @@ handleLogout = () => {
     }
 }
 
-  export default connect(mapStateToProps, {userLogout})(Landing);
+  export default connect(mapStateToProps, {userLogout,getProperties})(Landing);

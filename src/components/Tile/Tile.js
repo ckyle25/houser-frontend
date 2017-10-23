@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'
+import {deleteProperty} from '../../redux/appStateManage.js'
+import * as services from '../../services/services.js'
 import '../../assets/delete_icon.png';
 import '../../reset.css'
 import './Tile.css';
 
 class Tile extends Component {
-constructor() {
-  super()
-  this.state = {
-    recommendedRent: 2150,
-  }
+
+handleDelete = () => {
+  console.log(this.props.propPropertyID)
+  let propertyID = this.props.propPropertyID
+  this.props.deleteProperty(propertyID)
+    .then(window.location.reload())
 }
 
     render() {
@@ -34,11 +38,11 @@ constructor() {
                 </div>
                 <div className='tile-property-line-item'>
                   <div className='tile-bold-text'>Recommended Rent: </div>
-                  <div> ${this.state.recommendedRent}</div>
+                  <div> ${this.props.propRecommendedRent}</div>
                 </div>
                 <div className='tile-property-line-item'>
                   <div className='tile-bold-text'>Desired Rent: </div>
-                  <div> ${this.state.desiredRent}</div>
+                  <div> ${this.props.propDesiredRent}</div>
                 </div>
                 <div className='tile-property-line-item'>
                   <div className='tile-bold-text'>Address: </div>
@@ -57,11 +61,17 @@ constructor() {
                   <div>{this.props.propZip}</div>
                 </div>
               </div>
-              <img src={require('../../assets/delete_icon.png')}></img>
+              <img src={require('../../assets/delete_icon.png')} onClick={this.handleDelete}></img>
             </div>
         </div>
       );
     }
   }
 
-export default Tile;
+  function mapStateToProps(state) {
+    return {
+        currentUser: state.currentUser,
+    }
+}
+
+export default connect(mapStateToProps, {deleteProperty})(Tile);

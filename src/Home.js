@@ -15,7 +15,7 @@ handleLogin = () => {
     this.props.userLogin(obj)
         .then(response => {
             let userid = response.value
-            this.props.getProperties(userid)
+            this.props.getProperties()
         })
 }
 
